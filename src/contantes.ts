@@ -1,0 +1,1 @@
+export const urlApi = 'https://ace0-45-226-116-227.sa.ngrok.io/api';
