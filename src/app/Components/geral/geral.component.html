@@ -1,46 +1,15 @@
 <main>
   <div class="flex-right">
-    <button type="button" mat-raised-button routerLink="/login" class="btn btn-primary  m-10">Painel
-      Administrativo</button>
   </div>
   <div class="flex-center">
     <h1 data-subtitle="Grupo Águas do Brasil">Águas do Paraíba</h1>
   </div>
-  <div class="flex-center">
-    <div class="glass">
-      <form action="">
-        <h4>
-          Enviar Ocorrência
-        </h4>
-        <div class="form-group">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" placeholder="Nome" />
-        </div>
-        <div class="form-group">
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" placeholder="E-mail" />
-        </div>
-        <div class="form-group">
-          <label for="telefone">Telefone:</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="Telefone" />
-        </div>
-        <div class="form-group">
-          <label for="assunto">Assunto:</label>
-          <input type="text" id="assunto" name="assunto" placeholder="Assunto" />
-        </div>
-        <div class="form-group">
-          <label for="Imagem">Anexar Imagem:</label>
-          <input type="file" id="Imagem" name="Imagem" placeholder="Imagem" />
-        </div>
-        <div class="form-group">
-          <label for="mensagem">Mensagem:</label>
-          <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Mensagem"></textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </div>
-      </form>
+  <div>
+    <div class="flex-center">
+      <button type="button" routerLink="/cadastrar-ocorrencia" class="btn btn-primary m-10 p-10">Cadastrar
+        Ocorrencia</button>
+      <button type="button" routerLink="/login" class="btn btn-primary m-10 p-10">Painel
+        Administrativo</button>
     </div>
   </div>
-  <div></div>
 </main>

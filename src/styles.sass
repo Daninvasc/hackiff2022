@@ -102,10 +102,21 @@ h1:after
 .flex-right
   display: flex
   justify-content: flex-end
-  align-items: center
+  align-items: flex-start
 
 .m-10
   margin: 10px !important
+
+.p-10
+  padding: 10px 20px !important
+
+.btn-primary
+  background-color: var(--primary) !important
+  border-color: var(--primary) !important
+
+.btn-primary:hover
+  background-color: darken($primary, 5%) !important
+  border-color: darken($primary, 5%) !important
 
 @font-face
   font-family: "Myriad-Pro"

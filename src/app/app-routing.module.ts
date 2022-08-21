@@ -9,10 +9,10 @@ import { VisualizarDadosComponent } from './Components/visualizar-dados/visualiz
 const routes: Routes = [
   { path: '', component: GeralComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'cadastrar-ocorrencia', component: CadastrarOcorrenciaComponent },
   { path: 'dashboard', component: ContainerComponent, children: [
     { path: '', component: VisualizarDadosComponent },
-    { path: 'visualizar-dados', component: VisualizarDadosComponent },
-    { path: 'cadastrar-ocorrencia', component: CadastrarOcorrenciaComponent }
+    { path: 'visualizar-dados', component: VisualizarDadosComponent }
   ] },
 
 ];

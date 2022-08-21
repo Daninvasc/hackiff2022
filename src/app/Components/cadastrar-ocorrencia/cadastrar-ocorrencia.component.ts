@@ -34,7 +34,7 @@ export class CadastrarOcorrenciaComponent implements OnInit {
 
   cadastrarOcorrencia() {
     const response = this.http.post(urlApi, this.ocorrencia).toPromise();
-    console.log(response);    
+    console.log(response);
     console.log(this.ocorrencia);
   }
 
