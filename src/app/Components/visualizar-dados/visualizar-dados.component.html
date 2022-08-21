@@ -1,0 +1,51 @@
+<div class="border border-secondary p-3">
+    <form (submit)="enviarDadosApi()">    
+        <div class="row w-100">
+            <div class="col-md-5">
+                <mat-label>Selecione o período</mat-label>
+                <div class="d-flex flex-center p-1">
+                    <mat-form-field appearance="fill" class="w-100">
+                        <mat-label>Período inicial</mat-label>
+                        <input matInput mask="00/00/0000" [matDatepicker]="pickerIni" #ini (dateChange)="selecionaData(ini.value, 'ini')" [value]="dateIni.value">
+                        <mat-datepicker-toggle matSuffix [for]="pickerIni"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerIni></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="w-100">
+                        <mat-label>Período final</mat-label>
+                        <input matInput mask="00/00/0000" [matDatepicker]="pickerFim" #fim (dateChange)="selecionaData(fim.value, 'fim')" [value]="dateFim.value">
+                        <mat-datepicker-toggle matSuffix [for]="pickerFim"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerFim></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="col-md-3 desc">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Tipo de mapa</mat-label>
+                    <mat-select [(value)]="tipoMapa">
+                      <mat-option value="1">Pontos</mat-option>
+                      <mat-option value="0">Calor</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-3 desc">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Status</mat-label>
+                    <mat-select [(value)]="status">
+                      <mat-option value="1">Concluídos</mat-option>
+                      <mat-option value="2">Em aberto</mat-option>
+                      <mat-option value="3">Todas</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-1 flex-center">
+                <button class="btn btn-primary" type="submit">Buscar</button>  
+            </div>
+        </div>
+    </form>    
+    <iframe *ngIf="podeExibir" [src]="stringUrl" frameborder="0"></iframe>
+</div>
+
+

@@ -1,0 +1,6 @@
+{
+    "/api": {
+        "target": "https://2e2a-177-131-189-143.sa.ngrok.io",
+        "secure": false
+    }
+}
