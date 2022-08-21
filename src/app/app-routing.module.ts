@@ -6,7 +6,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { VisualizarDadosComponent } from './Components/visualizar-dados/visualizar-dados.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent, pathMatch: 'full' },
+  { path: '', component: GeralComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: ContainerComponent, children: [
     { path: '', component: VisualizarDadosComponent },

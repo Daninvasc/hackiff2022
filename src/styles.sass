@@ -1,12 +1,112 @@
 @import "~bootstrap/dist/css/bootstrap.css"
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
 
+$primary: #013E6A
+$primary-light: darken($primary, 5%)
+
+:root
+  --primary: #013E6A
+
 .red-button
-    color: white
-    background-color: #E63946
+  color: white
+  background-color: #E63946
 
 .default-blue-button
-    color: white
-    background-color: #457B9D
-    padding: .5em
-    border-radius: .5em
+  color: white
+  background-color: #457B9D
+  padding: .5em
+  border-radius: .5em
+
+form
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: $primary-light
+
+.form-group
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: $primary-light
+
+.form-group input, .form-group textarea
+  width: 100%
+  margin: 1em 0
+  border-radius: .5em
+  padding: .5em
+  border: 1px solid $primary-light
+  background: rgba(255, 255, 255, 0.2)
+  color: $primary-light
+
+.form-group input:focus, .form-group textarea:focus
+  outline: none
+  border: 1px solid $primary
+
+.form-group button
+  width: 100%
+  margin: 1em 0
+
+main
+  display: grid
+  width: 100%
+  height: 100%
+  min-height: 100vh
+  background: linear-gradient( rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.8) ), url("./assets/FotoRio.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  background-attachment: fixed
+  color: white
+
+.page-title
+  text-align: center
+
+h1
+  display: inline-block
+  position: relative
+  font-size: 5rem !important
+  font-style: italic
+  font-weight: 700
+  font-family: Myriad-Pro
+  text-shadow: 0 0 10px white
+  color: var(--primary)
+  margin-bottom: 1em !important
+
+h1:after
+  content: attr(data-subtitle)
+  position: absolute
+  top: 100%
+  right: 5px
+  font-size: 2rem
+
+.glass
+  background: rgba(255, 255, 255, 0.2)
+  border-radius: 16px
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+  backdrop-filter: blur(5px)
+  -webkit-backdrop-filter: blur(5px)
+  border: 1px solid rgba(255, 255, 255, 0.3)
+  padding: 1rem
+  width: 50%
+
+.float-right
+  float: right
+
+.flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+.flex-right
+  display: flex
+  justify-content: flex-end
+  align-items: center
+
+.m-10
+  margin: 10px !important
+
+@font-face
+  font-family: "Myriad-Pro"
+  src: url(./assets/MyriadProBold.ttf) format("truetype")
