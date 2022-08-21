@@ -26,6 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { DatePipe } from '@angular/common';
 import { GeralComponent } from './Components/geral/geral.component';
 import { CadastrarOcorrenciaComponent } from './Components/cadastrar-ocorrencia/cadastrar-ocorrencia.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +54,7 @@ import { CadastrarOcorrenciaComponent } from './Components/cadastrar-ocorrencia/
     MatSelectModule,
     MomentDateModule,
     MatIconModule,
+    GoogleMapsModule,
     NgxMaskModule.forRoot(),
     SocketIoModule.forRoot({ url: 'http://localhost:3000', options: { transports: ['websocket'] } })
   ],
